@@ -14,7 +14,7 @@ Para usar este componente, basta importá-lo em seu projeto Vue e passar o arqui
 
 Exemplo de uso:
 
-```javascript
+```vue
 <template>
     <div>
         <audio-player :file="audioFile"/>
