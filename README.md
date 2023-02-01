@@ -1,7 +1,38 @@
-# Vue 3 + Vite
+# Componente de Reprodução de Áudio Vue
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este componente Vue é uma solução simples e fácil de usar para a reprodução de arquivos de áudio em seu projeto. Ele utiliza a biblioteca WaveSurfer.js para exibir a forma de onda do áudio e controlar a reprodução.
 
-## Recommended IDE Setup
+## Características
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Exibição da forma de onda do áudio durante a reprodução
+- Botões de reprodução e pausa para controlar a reprodução
+- Exibição do tempo atual da reprodução e da duração total do áudio
+
+## Como usar
+
+Para usar este componente, basta importá-lo em seu projeto Vue e passar o arquivo de áudio como propriedade. O componente se encarregará de carregar e exibir a forma de onda do áudio e controlar a reprodução.
+
+Exemplo de uso:
+
+```javascript
+<template>
+    <div>
+        <audio-player :file="audioFile"/>
+    </div>
+</template>
+
+<script>
+import AudioPlayer from './AudioPlayer.vue';
+
+export default {
+    components: {
+        AudioPlayer
+    },
+    data() {
+        return {
+            audioFile: require('path/to/audio.mp3')
+        };
+    }
+};
+</script>
+```
